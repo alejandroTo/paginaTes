@@ -1,0 +1,333 @@
+.container3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 150px;
+  width: 100%;
+  background-color: gray;
+}
+
+.container3 .foot-nav-left {
+  width: 70%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container3 .foot-nav-left ul {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 0;
+  list-style: none;
+}
+
+.container3 .foot-nav-left ul li a {
+  margin: 0 40%;
+  font-size: xx-large;
+}
+
+.container3 .foot-nav-left .copy-rigth {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container3 .foot-nav-left .copy-rigth p {
+  font-size: xx-large;
+}
+
+.container3 .foot-social-rigth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30%;
+}
+
+.container3 .foot-social-rigth img {
+  width: 50px;
+  height: 50px;
+}
+
+/*nav*/
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .top-nav-left {
+  width: 30%;
+}
+
+.container .top-nav-left .img-nav {
+  width: 150px;
+  height: 100px;
+}
+
+.container .top-nav-middle {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .top-nav-middle a {
+  margin: 35px;
+}
+
+.container .top-nav-middle a:hover {
+  color: gray;
+}
+
+.container .top-nav-rigth {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .top-nav-rigth a {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+}
+
+.container .top-nav-rigth a:hover {
+  color: blue;
+}
+
+.container .top-nav-rigth .btn-try {
+  width: 100px;
+  height: 30px;
+  color: blue;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4em;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  border-color: blue;
+}
+
+.container .top-nav-rigth .btn-try::before, .container .top-nav-rigth .btn-try::after {
+  content: "";
+  background: red;
+  position: absolute;
+  display: block;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+.container .top-nav-rigth .btn-try::before {
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  -webkit-box-shadow: 0 -27px red;
+          box-shadow: 0 -27px red;
+}
+
+.container .top-nav-rigth .btn-try::after {
+  top: 0;
+  width: 3px;
+  -webkit-box-shadow: 97px 0 red;
+          box-shadow: 97px 0 red;
+  height: 0;
+}
+
+.container .top-nav-rigth .btn-try:hover::before {
+  width: 100%;
+}
+
+.container .top-nav-rigth .btn-try:hover::after {
+  height: 100%;
+}
+
+.container .top-nav-rigth .btn-login {
+  border: 1px #0000ff solid;
+  padding: 10px;
+  position: relative;
+}
+
+/*Declaracion de variables*/
+body {
+  background-image: url("https://i.blogs.es/d8b1ee/tesla/1366_2000.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: blur(0.4);
+          filter: blur(0.4);
+}
+
+body .container {
+  opacity: 0.9;
+  background: gold;
+}
+
+.form-reg {
+  background: #3b3838;
+  color: white;
+  font-family: 'Baloo Paaji 2', cursive;
+  -webkit-box-shadow: 2px 6px 24px 13px black;
+          box-shadow: 2px 6px 24px 13px black;
+  overflow: hidden;
+  height: 500px;
+  width: 500px;
+  margin: auto;
+  position: relative;
+  /*Vertical*/
+  /*Horizontal*/
+}
+
+.form-reg::after, .form-reg::before {
+  background: yellow;
+  position: absolute;
+  display: block;
+  content: "";
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+.form-reg::after {
+  bottom: 0;
+  width: 0;
+  height: 4px;
+  -webkit-box-shadow: 0 -495px yellow;
+          box-shadow: 0 -495px yellow;
+}
+
+.form-reg::before {
+  top: 0;
+  height: 0;
+  width: 4px;
+  /*Horizonal--Vertical--Color*/
+  -webkit-box-shadow: 495px 0 yellow;
+          box-shadow: 495px 0 yellow;
+}
+
+.form-reg:hover::after {
+  width: 100%;
+}
+
+.form-reg:hover::before {
+  height: 100%;
+}
+
+.form-reg .fild-top {
+  height: 20%;
+  border: transparent;
+  border-bottom: 2px red solid;
+}
+
+.form-reg .fild-top h1 {
+  margin: 0;
+  text-align: center;
+}
+
+.form-reg .fild-top .container-check {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.form-reg .fild-datos {
+  width: 100%;
+  height: 40%;
+  border: transparent;
+  border-bottom: 2px red solid;
+  padding: 0px 0px 0px 10px;
+}
+
+.form-reg .fild-datos input[type=text], .form-reg .fild-datos input[type=password] {
+  position: relative;
+  margin: 0 10px;
+  width: 200px;
+  height: 20px;
+}
+
+.form-reg .fild-genero {
+  width: 100%;
+  height: 10%;
+  border: transparent;
+  border-bottom: 2px red solid;
+}
+
+.form-reg .fild-btn {
+  width: 100%;
+  height: 20%;
+  border: transparent;
+  border-bottom: 2px red solid;
+}
+
+.form-reg .fild-btn .btn {
+  width: 150px;
+  border-radius: 15px;
+  border-color: blueviolet;
+  height: 40px;
+  color: blue;
+  font-size: large;
+  position: relative;
+}
+
+.form-reg .fild-btn .btn:hover {
+  border-radius: 0px;
+}
+
+.form-reg .fild-btn .btn:hover::before {
+  width: 100%;
+}
+
+.form-reg .fild-btn .btn:hover::after {
+  height: 100%;
+}
+/*# sourceMappingURL=app-login.css.map */

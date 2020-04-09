@@ -1,16 +1,30 @@
+@import "../footer";
+@import "../nav";
 /*Declaracion de variables*/
 $border-color: yellow;
-$boder-width: 4px;
+$boder-width: 5px;
 
-body {
+body{
+    background-image: url("https://i.blogs.es/d8b1ee/tesla/1366_2000.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .container{
+        opacity: 0.9;
+        background: white;
+    }
+    
     
 }
 .form-reg{
+    background: rgb(59, 56, 56);
+    color: white;
     font-family: 'Baloo Paaji 2', cursive;
+    box-shadow: 2px 6px 24px 13px rgba(0,0,0,1);
     overflow: hidden;
     height: 500px;
     width: 500px;
-    margin: auto;
+    margin: 10px auto;
     position: relative;
     &::after,&::before{
         background: $border-color;
@@ -21,7 +35,7 @@ body {
     }
     /*Vertical*/
     @function svert(){
-        @return -(500px-4px);
+        @return -(500px-5px);
     }
     &::after{
         bottom: 0;
@@ -90,5 +104,27 @@ body {
         height: 20%;
         border: transparent;
         border-bottom: 2px red solid;
+        display: flex;
+        
+        .btn{
+            width: 150px;
+            margin: 10px auto;
+            border-radius: 15px;
+            border-color: blueviolet;
+            height: 40px;
+            color: blue;
+            font-size: large;
+            position: relative;
+            
+            &:hover{
+                border-radius: 0px;
+                &::before{
+                    width: 100%;
+                }
+                &::after{
+                    height: 100%;
+                }
+            }
+        }
     }
 }
