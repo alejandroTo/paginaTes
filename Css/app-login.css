@@ -171,6 +171,13 @@ body {
     height: 10%;
     border: transparent;
     border-bottom: 2px red solid; }
+    .form-reg .fild-genero .container-genero {
+      width: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      margin: 0px;
+      justify-content: space-around; }
   .form-reg .fild-btn {
     width: 100%;
     height: 20%;
