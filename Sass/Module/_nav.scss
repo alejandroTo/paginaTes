@@ -1,0 +1,95 @@
+/*nav*/
+.container{
+    display: flex;
+    .top-nav-left{
+        width: 30%;
+        .img-nav{
+            width: 150px;
+            height: 100px;
+        }
+    }
+    .top-nav-middle{
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        
+        a{
+            margin: 35px;
+            &:hover{
+                color: gray;
+            }
+        }
+    }
+    .top-nav-rigth{
+        width: 20%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        
+            a{
+                font-family: 'Roboto', sans-serif;
+                font-size: 1em;
+                &:hover{
+                    color: blue;
+                }
+            }
+            .btn-try{
+                $border-size:3px;
+                $border-color:red;
+                @function restov(){
+                    @return -(30px - $border-size);
+                }
+                @function restoh(){
+                    @return (100px - $border-size);
+                }
+                width: 100px;
+                height: 30px;
+                color: blue;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 1.4em;
+                border-radius: 5px;
+                position: relative;
+                overflow: hidden;
+                
+                background-color: transparent;
+                border-color: blue;
+                &::before, &::after{
+                    content: "";
+                    background: $border-color;
+                    position: absolute;
+                    display: block;
+                    transition: all 2s;
+                }
+                &::before{
+                    bottom: 0;
+                    width: 0;
+                    height: $border-size;
+                    box-shadow: 0 restov() $border-color;
+                }
+                &::after{
+                    top: 0;
+                    width: $border-size;
+                    box-shadow: restoh() 0 $border-color;
+                    height: 0;
+                }
+                &:hover{
+                    &::before{
+                        width: 100%;
+                    }
+                    &::after{
+                        height: 100%;
+                    }
+                }
+                
+            }
+            .btn-login{
+                border: 1px #0000ff solid ;
+                padding: 10px;
+                position: relative;
+            }
+    }
+}

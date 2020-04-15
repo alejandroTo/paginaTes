@@ -1,0 +1,94 @@
+/*Declaracion de variables*/
+$border-color: yellow;
+$boder-width: 4px;
+
+body {
+    
+}
+.form-reg{
+    font-family: 'Baloo Paaji 2', cursive;
+    overflow: hidden;
+    height: 500px;
+    width: 500px;
+    margin: auto;
+    position: relative;
+    &::after,&::before{
+        background: $border-color;
+        position: absolute;
+        display: block;
+        content: "";
+        transition: all 2s;
+    }
+    /*Vertical*/
+    @function svert(){
+        @return -(500px-4px);
+    }
+    &::after{
+        bottom: 0;
+        width: 0;
+        height: 4px;
+        box-shadow: 0 svert() $border-color;
+    }
+    /*Horizontal*/
+    @function shori(){
+        @return (500px - $boder-width);
+    }
+    &::before{
+        top: 0;
+        height: 0;
+        width: 4px; 
+               /*Horizonal--Vertical--Color*/
+        box-shadow: shori() 0 $border-color;
+    }
+    &:hover{
+        &::after{
+            width: 100%;
+        }
+        &::before{
+            height: 100%;
+        }
+    }
+    .fild-top{
+        height: 20%;
+        border: transparent;
+        border-bottom: 2px red solid;
+        h1{
+            margin: 0;
+            text-align: center;
+        }
+        .container-check{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            margin:0px;
+            justify-content: space-around;
+        }
+        
+    }
+    .fild-datos{
+        width: 100%;
+        height: 40%;
+        border: transparent;
+        border-bottom: 2px red solid;
+        padding: 0px 0px 0px 10px;
+        input[type=text],input[type=password]{
+            position: relative;
+            margin: 0 10px;
+            width: 200px;
+            height: 20px;       
+        }   
+    }
+    .fild-genero{
+        width: 100%;
+        height: 10%;
+        border: transparent;
+        border-bottom: 2px red solid;
+    }
+    .fild-btn{
+        width: 100%;
+        height: 20%;
+        border: transparent;
+        border-bottom: 2px red solid;
+    }
+}
